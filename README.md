@@ -1,5 +1,6 @@
 # Green-QR-Scanner
-QR Scanner based on Ionic 5 and Capacitor
+QR Scanner based on Ionic 5 and Capacitor.
+
 Involved components:
 - Alert Controller
 - Toast Controller
