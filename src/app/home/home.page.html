@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>
+      Green QR Scanner
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="scan-result">
+    <div class="scan-result__text" id="scan-result-text">
+      <ion-icon *ngIf="!scanResult" name="qr-code"></ion-icon>
+      <span *ngIf="scanResult">{{scanResult}}</span>
+    </div>
+    <div class="scan-result__buttons">
+      <ion-fab-button color="success" (click)="scan()">
+        <ion-icon name="qr-code"></ion-icon>
+      </ion-fab-button>
+      <ion-fab>
+        <ion-fab-button color="success">
+          <ion-icon name="menu"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="bottom">
+          <ion-fab-button color="success" (click)="copy()">
+            <ion-icon name="copy"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="success" (click)="send()">
+            <ion-icon name="send"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="success" (click)="open()">
+            <ion-icon name="earth"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+  </div>
+</ion-content>
